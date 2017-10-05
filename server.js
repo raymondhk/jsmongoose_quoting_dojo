@@ -45,7 +45,7 @@ app.post('/quotes', (req, res) => {
           if(quote.errors.quote.message){
               errors.push(quote.errors.quote.message)
           }
-          if(quote.errors.name.message){
+          else if(quote.errors.name.message){
               errors.push(quote.errors.name.message)
           }
           console.log(errors)

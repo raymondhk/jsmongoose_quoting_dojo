@@ -14,6 +14,12 @@
         h1{
             text-align: center;
         }
+        #main{
+            /* box-shadow: 5px 5px 2px #888888; */
+            border: 1px solid #999;
+            padding: 50px;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
@@ -21,7 +27,7 @@
         <a href="/"><h1>Quoting Dojo!</h1></a>
         <div class="row">
             <div class="col-md-4"></div>
-            <div class="col-md-4">
+            <div class="col-md-4" id='main'>
                 <form action="/quotes" method="post">
                     <div class="form-group">
                         <label for="name">Name</label>
