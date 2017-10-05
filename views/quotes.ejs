@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quoting Dojo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+    h5{
+        /* padding-left: 30px; */
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Here are the awesome quotes!</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <% for (var i in quotes) { %>
+                    <h3><%= quotes[i].quote %></h3>
+                    <br>
+                    <h5 class="text-right">-<%= quotes[i].name %> at <%= moment(quotes[i].created).format('lll') %></h5>
+                    <hr>
+                <% } %>
+                
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-4"></div>            
+        </div>
+        <br>
+        <br>
+        <hr>
+        <a href="/" class='btn btn-default'>Home</a>
+    </div>
+</body>
+<script src="moment.js"></script>
+</html>

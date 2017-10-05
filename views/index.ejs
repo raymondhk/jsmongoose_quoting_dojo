@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quoting Dojo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        #error{
+            text-align: center;
+            color: #c5565e;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/"><h1>Quoting Dojo!</h1></a>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <form action="/quotes" method="post">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="quote">Quote</label>
+                        <textarea class="form-control" rows="5" id="quote" name="quote"></textarea>
+                    </div>
+                    <input type="submit" class="btn btn-success" value="Add Quote"><a href="/quotes" class="btn btn-warning pull-right">Skip To Quotes!</a>
+                </form>
+
+            </div>
+            <div class="col-md-4"></div>            
+        </div>
+        <br>
+
+        <br>
+        <div class="row">
+            <div class="col-md-12" id="error">
+                <% if(typeof(errors) != 'undefined' ) { %>
+                    <% for (let x in errors) { %>
+                    <p><%= errors[x] %></p>
+                    <% } %>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
